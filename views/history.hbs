@@ -1,0 +1,25 @@
+
+<div class="container mt-10">
+    <div class="row">
+        <div>
+            <h1>{{#if (ge histories.length 0)}}{{histories.0.page.title}}: Edit{{else}}NO{{/if}} History</h1>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <!--    <br/>-->
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">Description</th>
+            <th scope="col">Edited At</th>
+            <th scope="col">Diff</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each histories}}
+            {{>history_row history=.}}
+        {{/each}}
+        </tbody>
+    </table>
+</div>

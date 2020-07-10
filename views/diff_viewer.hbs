@@ -1,0 +1,23 @@
+<div class="container mt-10">
+    <div class="row">
+        <div>
+            <h1>Edit At {{createdAt}}</h1>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <div id="diff-viewer">
+
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        let targetElement = document.getElementById("diff-viewer")
+        const diffString = `{{diff}}`
+        console.log(diffString);
+        const configuration = {drawFileList: false, matching: 'lines', highlight: true, outputFormat: 'side-by-side'};
+        const diff2htmlUi = new Diff2HtmlUI(targetElement, diffString, configuration);
+        diff2htmlUi.draw();
+        diff2htmlUi.highlightCode()
+    })
+</script>

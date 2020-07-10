@@ -1,0 +1,15 @@
+<div class="container mt-10">
+    <div class="row">
+        <div>
+            <h1>Search Result For {{search}}</h1>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <div class="search">
+        {{#each result}}
+            <h2><a href="/page/{{this.link}}">{{this.title}}</a></h2>
+        {{/each}}
+    </div>
+</div>

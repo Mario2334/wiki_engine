@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="form-group row ml-1 mt-3">
+        <label class="mt-1" for="title"><h3>Title</h3></label>
+        <div class="col-sm-10">
+            <input type="text" value="{{title}}" class="form-control col-sm-6 mr-4" id="title" placeholder="Title">
+        </div>
+    </div>
+    <div class="form-group row ml-1">
+        <label class="mt-1" for="describe"><h3>Describe the change</h3></label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control col-sm-6 mr-4" id="describe" placeholder="Describe the change">
+        </div>
+    </div>
+
+    <div class="row ml-1">
+        <button onclick="submit_edit_page(event,'{{link}}')" class="btn btn-primary mr-4">Submit</button>
+        <button class="btn btn-danger mr-4">Cancel</button>
+
+        <div class="input-group col-sm-5">
+            <div onclick="image_upload(event)" style="cursor: pointer;" class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+            </div>
+            <div class="custom-file">
+                <input type="file" onchange="change_placeholder(event)" accept="image/*" class="custom-file-input"
+                       id="image-upload" aria-describedby="inputGroupFileAddon01">
+                <label class="custom-file-label" id="image-label" for="image-upload">Choose file</label>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row mt-3">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <h2>Editor</h2>
+            <textarea onkeyup="live_preview(event);" id="editor" class="well">{{markdown}}</textarea>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <h2>Preview</h2>
+            <div id="preview" class="border container" style="background-color: #f1f1f1">{{{html}}}</div>
+        </div>
+    </div>
+</div>

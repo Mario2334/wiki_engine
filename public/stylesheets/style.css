@@ -1,0 +1,16 @@
+.navbar{
+  background-color: #5e6563 !important;
+  justify-content: space-between;
+}
+#editor {
+  width: 100%;
+  height: 500px;
+  resize: none;
+}
+
+#preview {
+  width: 100%;
+  height: 500px;
+  resize: none;
+  overflow-y: scroll;
+}

@@ -1,0 +1,9 @@
+<tr>
+    {{#if (eq history.describe "")}}
+        <td><span>No Changelog entry</span></td>
+    {{else}}
+        <td>{{history.describe}}</td>
+    {{/if}}
+    <td>{{history.createdAt}}</td>
+    <td><a href="{{history.id}}/diff">diff</a></td>
+</tr>
